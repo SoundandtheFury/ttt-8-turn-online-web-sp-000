@@ -13,7 +13,9 @@ end
 
 #  the question mark makes the method return true or false based on the board and index
 def valid_move?(board, index)
-  board[index] == " " && board[inded] == "" & board[index] == nil
+  if index.between?(0,8)
+    if board[index] == " " && board[inded] == "" & board[index] == nil
+  end
 end
 
 def valid_move?(board, index)
@@ -30,7 +32,7 @@ end
 #accpts the user move and checks to see if it is valid and available, and moves if so
 def move(board, index, token=["X"])
   if valid_move?(index) 
-  
+    if
   
 end  
   
