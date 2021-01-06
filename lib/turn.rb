@@ -15,7 +15,6 @@ end
 def valid_move?(board, index)
   if index.between?(0,8)
     if board[index] == " " && board[inded] == "" & board[index] == nil
-      board[index,token] = index.token
   end
 end
 
@@ -28,9 +27,10 @@ end
 #accpts the user move and checks to see if it is valid and available, and moves if so
 def move(board, index, token=["X"])
   if valid_move?(board,index) 
+    board[index,token] = index.token
     display_board
   else
-    puts "That's not a valid play.  Try again."
+    puts "That's not a valid play.  Try again!"
     display_board
   end
 end  
