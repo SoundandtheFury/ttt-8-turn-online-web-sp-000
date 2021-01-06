@@ -29,7 +29,7 @@ end
 
 #accpts the user move and checks to see if it is valid and available, and moves if so
 def move(board, index, token=["X"])
-  
+  valid_move?(index)
   
   
 end  
