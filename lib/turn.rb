@@ -15,25 +15,24 @@ end
 def valid_move?(board, index)
   if index.between?(0,8)
     if board[index] == " " && board[inded] == "" & board[index] == nil
+      board[index,token] = index.token
   end
 end
 
-def valid_move?(board, index)
-  #check to see if it's a valid move, which is between 0 and 8
-  index.between?(0,8)
-end
-
 #determine if the chosed box is empty or taken
-def position_taken?(board, index)
-  board[index] != " " && board[index] != "" && board[index] != nil
-end
+#def position_taken?(board, index)
+#  board[index] != " " && board[index] != "" && board[index] != nil
+#end
 
 
 #accpts the user move and checks to see if it is valid and available, and moves if so
 def move(board, index, token=["X"])
-  if valid_move?(index) 
-    if
-  
+  if valid_move?(board,index) 
+    display_board
+  else
+    puts "That's not a valid play.  Try again."
+    display_board
+  end
 end  
   
   
